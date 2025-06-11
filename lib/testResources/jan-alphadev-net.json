@@ -1,0 +1,96 @@
+{
+    "version": "https://jsonfeed.org/version/1.1",
+    "title": "Jans Stuff",
+    "description": "Der alltägliche Wahnsinn",
+    "home_page_url": "https://jan.alphadev.net",
+    "feed_url": "https://jan.alphadev.net/feed.json",
+    "favicon": "https://jan.alphadev.net/favicon.ico",
+    "authors": [
+        {
+            "name": "Jan Seeger"
+        }
+    ],
+    "language": "en",
+    "items": [
+        {
+            "id": "https://jan.alphadev.net/blog/2025/copenhagen/",
+            "url": "https://jan.alphadev.net/blog/2025/copenhagen/",
+            "title": "Copenhagen",
+            "content_text":"\n\n        Copenhagen\n\nMay 23, 2025 • Jan Seeger\ntravelscopenhagen\n\n",
+            "date_published": "2025-05-23T00:00:00+00:00",
+            "date_modified": "2024-10-04T18:16:37+00:00"
+        },
+        {
+            "id": "https://jan.alphadev.net/blog/2025/localsend/",
+            "url": "https://jan.alphadev.net/blog/2025/localsend/",
+            "title": "LocalSend",
+            "content_text":"There’s AirDrop for Apple Devices and there’s Quick Share for Android. But in order to transfer data across ecosystem boundaries, one needed to upload the data to a cloud service first and then download everything again on the receiving device.\n\nLocalSend is an open-source, cross-platform implementation in Dart. It works on a plethora of different platforms like all major Desktop and Mobile OSes, but also supports headless clients for automations.\n\n",
+            "date_published": "2025-04-26T00:00:00+00:00",
+            "date_modified": "2024-10-04T18:16:37+00:00"
+        },
+        {
+            "id": "https://jan.alphadev.net/blog/2025/motorcycle-post-mortem/",
+            "url": "https://jan.alphadev.net/blog/2025/motorcycle-post-mortem/",
+            "title": "Motorcycle Accident Post Mortem",
+            "content_text":"\n\nOn Thursday 20th February 2025 at 14:06 I had a motorcycle accident. I lost traction at low speed (approx. 35km/h) and was thrown off, landed hard, rolled over several times. This post will serve as a post mortem which drills into the causes, describes mitigative measures and preventative steps.\n\nNote: This post had started in my head, while laying awake in a hospital bed the night after the crash, but publishing has been deliberately delayed until all the legal proceedings have concluded.\n\nIssue summary.\nSeveral smaller causes, each not severe enough to outright cause a crash, combined, lead to catastrophic failure.\n\nA Timeline.\n\nMonday 25. January 2025\n\n13:50 Rode bike a few KMs in in the rain (in \"rain mode\"), got throttle fault warning\n13:51 Changed drive select to sport mode to clear the error message\n13:51 Parked in garage, waiting for better weather\n\n\nThursday 20. February 2025\n\n14:02 Started bike up\n14:02 got error message about 12V battery being too cold. Throttle was locked.\n14:04 After warming the battery up using integrated heater, the message was gone and throttle would work.\n14:05 Rode two turns\n14:05 Made bow around construction site\n14:05 Lost traction by oversteering to the right\n14:05 Tried to compensate in the other direction, oversteered to the left\n14:05 Tried to compensate to the right again and fell over\n14:05 Tumbled over the street four times\n\n\nImpact and Mitigation\n\nAmbulance driver, 5 hours of wait time in the emergency room, pain in shoulder did not set in until 90 min after the accident.\n\nRoot cause analysis\n\nBelow operating temperature\n\nThe 12V battery being too cold to operate and needing to be heated, should have served as a giant red flag that the entire bike was below operating temperature. While bikes do not need winter tires in Germany, the rubber mix isn’t made to be ridden at low temperatures.\n\nAir temperature during the accident was 13°C, but the bikes temperature sensor showed 4°C at the main battery pack, which is safe to assume the rest of the bike (including tires) had a similar temperature.\n\nSport mode\n\nForgetting to set back the ride mode to Standard or Rain, even after clearing the errors might have lead to the throttle to respond with too much torque than the situation could handle.\n\nContributing factors\n\nProtective gear\n\nBecause the planned route was merely 450 m, donning the proper protective gear was omitted, leading to scratches and bruises.\n\nWearing proper protective gear might have led to sliding on the contact pads instead of the torso having to dissipate the excess momentum by rolling over.\n\nGround composition\n\nFreshly mended construction site with spots of fresh asphalt. Wet spot, shaded by a large house.\n\nConsidered contributing factor because “a wet road” shouldn’t directly lead to an accident, but will factor into it.\n\nUnknown tire pressure\n\nThe bike has just come out of winter sleep and was yet to be checked for sufficient tire pressures. That was to be the next step after charging and a good cleaning.\n\nResolution and recovery\n\nShoulder surgery\n\n\n  \n  \n\n\nI have since received a shoulder surgery where they applied a titanium bracket to fix my broken collar bone in place, until the bone grows back together.\n\nRestore bike\n\n\n\nAfter the initial assessment the handlebar was mauled by the asphalt, the bike has lost its foot pegs on the right side and the rear brake lever. But other than that it seems unharmed1. Frame is not bent, the battery and drive train are fine.\n\nCorrective and preventative measures\n\n\n  Heed warning signs and red flags!\n  Always wear protective gear (even for short trips of a few hundred meters)\n  Check temperatures before riding and let bike soak in the sun if too cold\n  Buy a cheap battery powered tire pump and pressure gauge and regularly check tires\n\n\n\n  \n    \n      It ended up needing a new rear brake pump. &#8617;\n    \n  \n\n",
+            "date_published": "2025-04-04T00:00:00+00:00",
+            "date_modified": "2024-10-04T18:16:37+00:00"
+        },
+        {
+            "id": "https://jan.alphadev.net/blog/2025/fun-with-drives2/",
+            "url": "https://jan.alphadev.net/blog/2025/fun-with-drives2/",
+            "title": "Fun with drives, again",
+            "content_text":"Monday: Another one of those instances where I woke up to an alert mail:\n\n\n  Storage Pool 2 on XXXXXX has degraded (total number of drives: 2; number of active drives: 1).\n\n\nPresumably after a system update and subsequent reboot one of the two M.2 drives couldn’t be found anymore. Not only as part of the Storage Pool but it didn’t show up at all.\n\nFirst, I tried rebooting, which didn’t change anything.\n\nAnd for good measure I ran the script that adds the non-Synology blessed drives again. It dutifully reported the drive models were added to the database.\n\nAnd after a reboot to load the new database it still didn’t show up.\n\nTo not break anything further by hastily trying things out, I muted the alarm. The storage pool was online and working albeit being degraded. Fixing this must be postponed until time allows.\n\nScheduled maintenance\n\nOn Saturday my new UPS arrived and to hook it up I had to shutdown the machine. While it was powered off I removed both drives and reseated them.\n\nWhen I booted up the device again the second drive mysteriously appeared. The drive was detected but the storage pool could not be repaired because the drive supposedly wasn’t compatible but adding it to the pool as replacement for the missing drive did work.\n\nOf Note\n\n\n  Both M.2 drives are identical and have the same model number. Only the one in Slot 1 was detected (Before and after patching the database)\n  Loosing the electrical contact due to a software update is very unlikely.\n\n\nFurther proceedings\n\nAs with last time: Nothing.\n\nNow all drives are recognised and all storage pools are working properly. Time will tell if the next update breaks the pools again. But now that I have documented the steps taken,  recovery time should be negligible.\n\n",
+            "date_published": "2025-03-23T00:00:00+00:00",
+            "date_modified": "2024-10-04T18:16:37+00:00"
+        },
+        {
+            "id": "https://jan.alphadev.net/blog/2025/semi-automatic-appearance-switching/",
+            "url": "https://jan.alphadev.net/blog/2025/semi-automatic-appearance-switching/",
+            "title": "Semi-Automatic macOS Dark/Light mode switching",
+            "content_text":"I prefer to keep the appearance setting to auto, so that my computer will be in light mode during the day and in dark mode at night.\n\n\n\nBut sometimes when working in a particularly dim or an exceedingly bright room, I like to override this using this simple shortcut here:\n\n\n\nThis would work, but then permanently set it to the opposite value, say I’d invoke the shortcut during the day, it would set it to dark mode and stay that way forever.\n\nEven weirder: The Auto option isn’t even available via the Shortcuts interface. So you’d have to remember1 to go to the System Preferences and switch it back to auto or keep manually switching using the Shortcut.\n\n2nd approach: Programmatically setting the value\n\nmacOS stores all settings in .plist files, which can be accessed using the defaults command. The automatic switching and interface style can be found under the following keys:\n\nAppleInterfaceStyleSwitchesAutomatically = 1\nAppleInterfaceStyle = Dark\n\n\nBut for the changes to the .plist to take effect you’d have to log out and log in again, which is not optimal for a casual action.\n\n3rd approach: Telling UI Automator to tell macOS to switch\n\nThe UI Automator can override the values both immediately and will not overwrite the the auto setting.\n\n\n\nThis now properly works, while being overly complicated (Shortcut running Apple Script, invoking UI Automator to change a simple value in a .plist) it ticks all the boxes for me.\n\n\n  \n    \n      or notice days later &#8617;\n    \n  \n\n",
+            "date_published": "2025-03-05T00:00:00+00:00",
+            "date_modified": "2024-10-04T18:16:37+00:00"
+        },
+        {
+            "id": "https://jan.alphadev.net/blog/2025/opml-tool/",
+            "url": "https://jan.alphadev.net/blog/2025/opml-tool/",
+            "title": "OPML tool",
+            "content_text":"As already hinted at in the Tracking Newsfeed changes post, I have written a small tool that reads an OPML file, reformats it in a reproducible way, and then outputs it back again into the same file.\n\nIt was deeply entangled with the greater RSS project I am working on in the background. But I got it successfully separated and put a minimal Amper wrapper1 around it, which is way more lightweight than a comparable Gradle-based build.\n\nYou can grab it here and try for yourself:\n\n\n  Clone the repo\n    git clone git@github.com:janseeger/kotlin-opml.git\n    \n  \n  Export the OPML file from your RSS reader of choice and put it in an empty directory\n     mkdir rss\n mv feeds.opml rss/\n git init rss\n    \n  \n  Format the OPML\n     cd kotlin-opml\n ./amper run ../rss/feeds.opml\n cd ..\n    \n  \n  Track changes using git\n     cd rss\n git add feeds.oml\n git commit -m \"initially adding feed\"\n    \n  \n\n\nFrom now on, you can repeat steps 3 and 4, and depending on the cadence and quality of your change messages you’ll get a nice record of what happened to your subscriptions:\n\n\n  You subscribed/unsubscribed a Feed\n  Author changed the name of the Feed\n  Feed URL or even Domain changed\n  Removed broken Feed that couldn’t be retrieved anymore\n\n\nAnd now?\nI get that this won’t fix all your problems, but at least, if done regularly can provide interesting insights into your feed, and if nothing else serves as a nice backup.\n\n\n  \n    \n      While Amper is not yet ready for large projects, it works wonderfully for small ones like this. &#8617;\n    \n  \n\n",
+            "date_published": "2025-02-14T00:00:00+00:00",
+            "date_modified": "2024-10-04T18:16:37+00:00"
+        },
+        {
+            "id": "https://jan.alphadev.net/blog/2025/hello-jellyfin/",
+            "url": "https://jan.alphadev.net/blog/2025/hello-jellyfin/",
+            "title": "Hello, Jellyfin!",
+            "content_text":"After years of deliberation, and a short but unsuccessful test run in the past, I finally made the switch to from Plex over to Jellyfin.\n\nThe migration itself was the easiest part, as in the past I had started to use the Dockerised version of Plex again, which again does have folder permission issues when mounting the data into the Container, but thanks to watchtower gets updated in a timely manner (within hours of a new update dropping).\n\nFor the switch all I had to do was to download the Jellyfin docker image, mount the same media folders that Plex had and start it up. After a few clicks in the user interface, it was ready to go: I switched the destination in the reverse proxy to the new instance and stopped the Plex container.\n\nAll this merely took a couple of minutes.\n\nApp Support\n\nIt took me a while to get all the apps replaced, with all the features I want.\n\nmacOS\n\n  Infuse stays, as it supports both Plex and Jellyfin\n  Plexamp -&gt; Finer\n\n\nAppleTV\n\n\n  Infuse, see macOS.\n\n\niOS\n\n  \n    Plexamp / Prism -&gt; ?\n\n    On iOS there’s plenty of apps to choose from:\n\n    \n      Manet: CarPlay, looks nice, Closed Source\n      Finamp: No CarPlay 👎, Cross Platform (Flutter), looks awfully Android-y, Open Source\n      Fintunes: No CarPlay 👎, Cross Platform (React), looks nice, Open Source\n      AmpFin: No CarPlay 👎, looks nice, Open Source\n    \n\n    Manet is the only viable alternative at the moment, because the others lack CarPlay support. But I’ll try them all out when not driving.\n  \n  \n    Prologue -&gt; plappa\n  \n\n\nAndroid\n\n\n  Plexamp -&gt; Fintunes\n\n\n",
+            "date_published": "2025-01-28T00:00:00+00:00",
+            "date_modified": "2024-10-04T18:16:37+00:00"
+        },
+        {
+            "id": "https://jan.alphadev.net/blog/2025/motorcycle-comms/",
+            "url": "https://jan.alphadev.net/blog/2025/motorcycle-comms/",
+            "title": "Motorcycle Comms",
+            "content_text":"The first riding season I deliberately did not listen to music or podcasts, I wanted to experience the journey. Keep the focus on the road ahead.\n\nFor this second upcoming season I wanted to try a headset, hoping that this would also solve my audio problems.\n\nAfter much deliberation, I went with the Kardo one instead of Sena. And for future-proofing, it also had to be a mesh-capable one. So, no Freecom for me.\n\nThis leaves the Packtalk Edge, Neo and Louis Edition. According to some AI slop pages, the main difference between the Edge and Neo are bigger speakers (44 mm instead of 40 mm) and that you don’t have to manually plug/unplug the USB-C when mounting.\n\nThere wasn’t much on the specifics of the Louis Edition apart from the older version where it seemed to have been a rebranded Packtalk Bold. But since my helmet1 only has space to accommodate 40mm speakers anyway, I decided to give it a try.\n\nPacktalk Louis Edition (Neo)\n\nInstallation was a matter of minutes2 and the voice quality is after quick testing more than nice enough for my purposes.\n\nThe updated Louis Edition headset is a rebranded Packtalk Neo, which is why it comes with the smaller speakers. Unfortunately, I only noticed this halfway through the installation. I was more preoccupied with properly routing the cables than to look where they terminate. I’ll stick with the Neo for now, but had I known, I would have gone for the Edge.\n\n\n\nSince the USB-C cable is separate from the mounting base, I now always have to put the device on or find a way to tie up the loose cable. Otherwise it will get annoying pretty fast.\n\nIf you think about getting the Neo or Louis Edition, spend some more and get the Packtalk Edge where the connectors are built-in pogo pins.\n\nLeft to do\n\nI’ll report back once this thing has seen a few KMs of road.\n\nApart from the indoor voice quality and functionality check, I haven’t seen much. I don’t know yet how long the battery lasts, or if it will work nicely being connected to the phone (to manage mesh participants), while being connected to the CarPlay display. Same goes for my Phone.\n\n\n  \n    \n      Scorpion Exo 1200-Air &#8617;\n    \n    \n      If you know how to disassemble and properly reassemble the paddings of your helmet &#8617;\n    \n  \n\n",
+            "date_published": "2025-01-12T00:00:00+00:00",
+            "date_modified": "2024-10-04T18:16:37+00:00"
+        },
+        {
+            "id": "https://jan.alphadev.net/blog/2025/more-zero-modifications/",
+            "url": "https://jan.alphadev.net/blog/2025/more-zero-modifications/",
+            "title": "More Motorcycle Electric Mods",
+            "content_text":"USB-C PD charger\n\nOstensibly the bike can easily provide up to 500W accessory power using its 12V DC-DC converter. But the built-in USB ports are USB-A and are therefore for phones and other smaller devices.\n\nI extended the accessory power lead along the chassis under the riders seat back to the top case, where a weatherproof detachable connector passes power to the inside.\n\n\n\nThe Pekaway 100W USB-C PD adapter was originally designed for caravan but works fine for bikes and MacBooks and Steam Decks. With that the electric mods are done.\n\n",
+            "date_published": "2025-01-05T00:00:00+00:00",
+            "date_modified": "2024-10-04T18:16:37+00:00"
+        },
+        {
+            "id": "https://jan.alphadev.net/blog/2025/analytics/",
+            "url": "https://jan.alphadev.net/blog/2025/analytics/",
+            "title": "Analytics",
+            "content_text":"I just looked it up in git: This blog had used Google Analytics from 10th October 2014 until I removed it again on 25th of January 2018. Originally I had removed it because the data wasn’t of much use to me, rather was a liability.\n\nBut to satisfy my curiousity, I just added the tinylytics Snippet into the footer of this page. They host in Europe, are GDPR-compliant, and do seem to collect only minimal info (they don’t seem as focused on moving people through marketing funnels as others are). And they provide to option to publicly show the data, so effectively you get to see the same reports I do.\n\nThis is an experiment, if I can get something positive out of it, I might go ahead with analytics. Or remove it again, if it turns out to be of no use to me.\n\n",
+            "date_published": "2025-01-03T00:00:00+00:00",
+            "date_modified": "2024-10-04T18:16:37+00:00"
+        }
+    ]
+}

@@ -1,0 +1,13 @@
+product: jvm/app
+
+dependencies:
+  - ../lib
+  - $libs.ajalt.clikt
+  - $libs.okhttp
+
+settings:
+  publishing:
+    name: jsonfeed-demo
+
+apply:
+  - ../publish.module-template.yaml
