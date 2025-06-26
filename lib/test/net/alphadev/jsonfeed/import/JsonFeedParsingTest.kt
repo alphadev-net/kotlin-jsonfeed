@@ -6,7 +6,10 @@ import kotlin.test.Test
 import kotlin.test.assertEquals
 import net.alphadev.jsonfeed.readResource
 import net.alphadev.jsonfeed.format.JsonFeed
+import kotlin.time.ExperimentalTime
+import kotlin.time.Instant
 
+@OptIn(ExperimentalTime::class)
 class JsonFeedParsingTest {
 
     @Test
@@ -14,6 +17,9 @@ class JsonFeedParsingTest {
         readResource("jsonfeed-org.json") { input ->
             val feed = Json.decodeFromString<JsonFeed>(input.readString())
             assertEquals(2, feed.items.size)
+
+            val firstItem = feed.items.first()
+            assertEquals(Instant.fromEpochSeconds(1596818676), firstItem.datePublished)
         }
     }
 

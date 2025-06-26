@@ -1,8 +1,9 @@
 package net.alphadev.jsonfeed.format
 
-import kotlinx.datetime.Instant
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
+import net.alphadev.sitemap.format.IsoDateSerializer
+import kotlin.time.Instant
 
 @Serializable
 data class JsonItem(
@@ -19,10 +20,15 @@ data class JsonItem(
     val image: String? = null,
     @SerialName("banner_image")
     val bannerImage: String? = null,
+
     @SerialName("date_published")
+    @Serializable(with = IsoDateSerializer::class)
     val datePublished: Instant? = null,
+
     @SerialName("date_modified")
+    @Serializable(with = IsoDateSerializer::class)
     val dateModified: Instant? = null,
+
     val authors: List<JsonAuthor>? = null,
     val tags: List<String>? = null,
     val language: String? = null,

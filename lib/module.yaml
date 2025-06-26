@@ -11,6 +11,8 @@ dependencies:
 settings:
   kotlin:
     serialization: json
+    optIns:
+      - kotlin.time.ExperimentalTime
   publishing:
     name: kotlin-jsonfeed
 
