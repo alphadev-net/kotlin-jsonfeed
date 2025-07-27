@@ -7,6 +7,20 @@ import kotlin.time.Instant
 
 class JsonItemParsingTest {
     @Test
+    fun testDecodingWithMinimallyRequiredAttributesWorks() {
+        val input = """
+            {
+              "id": "http://jsonfeed.micro.blog/2020/08/07/json-feed-version.html",
+              "content_text": "test"
+            }
+        """.trimIndent()
+
+        val item = Json.decodeFromString<JsonItemInternal>(input).toJsonItem()
+        assertEquals("http://jsonfeed.micro.blog/2020/08/07/json-feed-version.html", item.id)
+        assertIs<TextContent>(item.content)
+    }
+
+    @Test
     fun testHappyPathWorks() {
         val input = """
             {
