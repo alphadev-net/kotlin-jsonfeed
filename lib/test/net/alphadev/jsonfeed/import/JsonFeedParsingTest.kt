@@ -106,4 +106,20 @@ class JsonFeedParsingTest {
 
         assertIs<JsonFeed>(parseJsonFeed(input))
     }
+
+    @Test
+    fun testV1WithV11LanguageFieldSetFails() {
+        val input = """
+        {
+            "version": "https://jsonfeed.org/version/1",
+            "title": "JSON Feed",
+            "language": "EN",
+            "items": []
+        }
+        """.trimIndent()
+
+        assertFailsWith<FeedParsingException> {
+            parseJsonFeed(input)
+        }
+    }
 }

@@ -29,7 +29,12 @@ internal fun JsonFeedInternal.toJsonFeed() = JsonFeed(
 
         addAll(authors)
     },
-    language = language,
+    language = language?.let {
+        when (version) {
+            JsonFeed11 -> it
+            else -> throw FeedParsingException("JsonFeed v1.1 attribute language detected in JsonFeed with version $version")
+        }
+    },
     expired = expired,
     items = items
 )
