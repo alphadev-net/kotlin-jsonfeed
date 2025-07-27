@@ -2,6 +2,8 @@ package net.alphadev.jsonfeed.exporter
 
 import net.alphadev.jsonfeed.format.JsonFeed
 import net.alphadev.jsonfeed.format.JsonFeedInternal
+import net.alphadev.jsonfeed.format.JsonItem
+import net.alphadev.jsonfeed.format.toJsonItemInternal
 
 internal fun JsonFeed.toJsonFeedInternal() = JsonFeedInternal(
     version = version,
@@ -17,5 +19,5 @@ internal fun JsonFeed.toJsonFeedInternal() = JsonFeedInternal(
     authors = authors,
     language = language,
     expired = expired,
-    items = items
+    items = items.map(JsonItem::toJsonItemInternal)
 )

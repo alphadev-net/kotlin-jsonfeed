@@ -1,9 +1,6 @@
 package net.alphadev.jsonfeed.import
 
-import net.alphadev.jsonfeed.format.JsonAuthor
-import net.alphadev.jsonfeed.format.JsonFeed
-import net.alphadev.jsonfeed.format.JsonFeed11
-import net.alphadev.jsonfeed.format.JsonFeedInternal
+import net.alphadev.jsonfeed.format.*
 
 internal fun JsonFeedInternal.toJsonFeed() = JsonFeed(
     version = JsonFeed11,
@@ -29,5 +26,5 @@ internal fun JsonFeedInternal.toJsonFeed() = JsonFeed(
         }
     },
     expired = expired,
-    items = items
+    items = items.map(JsonItemInternal::toJsonItem)
 )

@@ -36,5 +36,5 @@ internal data class JsonFeedInternal(
 
     val expired: Boolean? = false,
 
-    val items: List<JsonItem>
+    val items: List<JsonItemInternal>
 )
