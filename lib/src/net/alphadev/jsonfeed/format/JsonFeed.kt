@@ -21,5 +21,5 @@ data class JsonFeed(
     val authors: List<JsonAuthor>? = null,
     val language: String? = null,
     val expired: Boolean? = false,
-    val items: List<JsonItem> = emptyList()
+    val items: List<JsonItem>
 )

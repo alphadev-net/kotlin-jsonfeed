@@ -1,9 +1,12 @@
 package net.alphadev.jsonfeed.import
 
 import kotlinx.io.readString
+import net.alphadev.jsonfeed.format.JsonFeed
 import net.alphadev.jsonfeed.readResource
 import kotlin.test.Test
 import kotlin.test.assertEquals
+import kotlin.test.assertFailsWith
+import kotlin.test.assertIs
 import kotlin.time.ExperimentalTime
 import kotlin.time.Instant
 
@@ -27,6 +30,62 @@ class JsonFeedParsingTest {
             val feed = parseJsonFeed(input.readString())
             assertEquals("Jans Stuff", feed.title)
             assertEquals(10, feed.items.size)
+        }
+    }
+
+    @Test
+    fun testFeedWithOnlyTheRequiredFieldsParses() {
+        val input = """
+        {
+            "version": "https://jsonfeed.org/version/1",
+            "title": "JSON Feed",
+            "items": []
+        }
+        """.trimIndent()
+
+        val feed = parseJsonFeed(input)
+        assertIs<JsonFeed>(feed)
+    }
+
+    @Test
+    fun testFeedWithoutVersionThrowsError() {
+        val input = """
+        {
+            "title": "JSON Feed",
+            "items": []
+        }
+        """.trimIndent()
+
+        assertFailsWith<FeedParsingException> {
+            parseJsonFeed(input)
+        }
+    }
+
+    @Test
+    fun testFeedWithoutTitleThrowsError() {
+        val input = """
+        {
+            "version": "https://jsonfeed.org/version/1",
+            "items": []
+        }
+        """.trimIndent()
+
+        assertFailsWith<FeedParsingException> {
+            parseJsonFeed(input)
+        }
+    }
+
+    @Test
+    fun testFeedWithoutItemsThrowsError() {
+        val input = """
+        {
+            "version": "https://jsonfeed.org/version/1",
+            "title": "JSON Feed"
+        }
+        """.trimIndent()
+
+        assertFailsWith<FeedParsingException> {
+            parseJsonFeed(input)
         }
     }
 }
