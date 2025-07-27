@@ -9,20 +9,3 @@ fun formatJsonFeed(jsonFeed: JsonFeed): String = try {
 } catch (ex: Throwable) {
     throw FeedExportException(cause = ex)
 }
-
-internal fun JsonFeed.toJsonFeedInternal() = JsonFeedInternal(
-    version = version,
-    title = title,
-    homePageUrl = homePageUrl,
-    feedUrl = feedUrl,
-    description = description,
-    userComment = userComment,
-    nextUrl = nextUrl,
-    icon = icon,
-    favicon = favicon,
-    v1author = null,
-    authors = authors,
-    language = language,
-    expired = expired,
-    items = items
-)
