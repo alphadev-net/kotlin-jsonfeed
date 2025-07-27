@@ -1,26 +1,34 @@
 package net.alphadev.jsonfeed.format
 
-const val JsonFeed1 = "https://jsonfeed.org/version/1"
-const val JsonFeed11 = "https://jsonfeed.org/version/1.1"
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
-data class JsonFeed(
+@Serializable
+internal data class JsonFeedInternal(
     val version: String,
 
     val title: String,
 
+    @SerialName("home_page_url")
     val homePageUrl: String? = null,
 
+    @SerialName("feed_url")
     val feedUrl: String? = null,
 
     val description: String? = null,
 
+    @SerialName("user_comment")
     val userComment: String? = null,
 
+    @SerialName("next_url")
     val nextUrl: String? = null,
 
     val icon: String? = null,
 
     val favicon: String? = null,
+
+    @SerialName("author")
+    val v1author: String? = null,
 
     val authors: List<JsonAuthor> = emptyList(),
 
