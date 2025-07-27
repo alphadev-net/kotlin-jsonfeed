@@ -4,10 +4,10 @@ import kotlinx.serialization.json.Json
 import net.alphadev.jsonfeed.format.JsonFeed
 import net.alphadev.jsonfeed.format.JsonFeedInternal
 
-fun formatJsonFeed(jsonFeed: JsonFeed): String? = try {
+fun formatJsonFeed(jsonFeed: JsonFeed): String = try {
     Json.encodeToString(JsonFeedInternal.serializer(), jsonFeed.toJsonFeedInternal()) + "\n"
-} catch (_: Throwable) {
-    null
+} catch (ex: Throwable) {
+    throw FeedExportException(cause = ex)
 }
 
 internal fun JsonFeed.toJsonFeedInternal() = JsonFeedInternal(
