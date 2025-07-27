@@ -27,7 +27,9 @@ data class JsonFeed(
 
     val favicon: String? = null,
 
-    val authors: List<JsonAuthor>? = null,
+    val author: String? = null,
+
+    val authors: List<JsonAuthor> = emptyList(),
 
     val language: String? = null,
 

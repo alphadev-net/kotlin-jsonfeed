@@ -88,4 +88,24 @@ class JsonFeedParsingTest {
             parseJsonFeed(input)
         }
     }
+
+    @Test
+    fun testFeedBothAuthorAndAuthorsSet() {
+        val input = """
+        {
+            "version": "https://jsonfeed.org/version/1",
+            "title": "JSON Feed",
+            "author": "test",
+            "authors": [
+                {
+                    "name": "test2"
+                }
+            ],
+            "items": []
+        }
+        """.trimIndent()
+
+        val feed = parseJsonFeed(input)
+        assertIs<JsonFeed>(feed)
+    }
 }
