@@ -2,6 +2,7 @@ package net.alphadev.jsonfeed.import
 
 import kotlinx.io.readString
 import net.alphadev.jsonfeed.format.JsonFeed
+import net.alphadev.jsonfeed.format.useText
 import net.alphadev.jsonfeed.readResource
 import kotlin.test.Test
 import kotlin.test.assertEquals
@@ -121,5 +122,30 @@ class JsonFeedParsingTest {
         assertFailsWith<FeedParsingException> {
             parseJsonFeed(input)
         }
+    }
+
+
+
+    @Test
+    fun testItemIsSkippedWhenIdIsMissing() {
+        val input = """
+        {
+            "version": "https://jsonfeed.org/version/1",
+            "title": "JSON Feed",
+            "items": [
+                {
+                  "id": "http://jsonfeed.micro.blog/2020/08/07/json-feed-version.html",
+                  "content_text": "test"
+                },
+                {
+                  "content_text": "test2"
+                }
+            ]
+        }
+        """.trimIndent()
+
+        val feed = parseJsonFeed(input)
+        assertEquals(1, feed.items.size)
+        assertEquals("test", feed.items.first().content.useText)
     }
 }

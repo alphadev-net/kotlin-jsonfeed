@@ -5,9 +5,9 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 internal data class JsonFeedInternal(
-    val version: String,
+    val version: String? = null,
 
-    val title: String,
+    val title: String? = null,
 
     @SerialName("home_page_url")
     val homePageUrl: String? = null,

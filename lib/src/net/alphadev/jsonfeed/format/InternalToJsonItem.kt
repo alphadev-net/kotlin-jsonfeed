@@ -5,7 +5,7 @@ import net.alphadev.jsonfeed.import.FeedParsingException
 import kotlin.time.Instant
 
 fun JsonItemInternal.toJsonItem() = JsonItem(
-    id = id,
+    id = id ?: throw FeedParsingException("JsonItem needs the id Field to be set"),
     url = url,
     externalUrl =externalUrl,
     title = title,

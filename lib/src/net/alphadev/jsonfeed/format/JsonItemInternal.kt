@@ -5,7 +5,7 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 data class JsonItemInternal(
-    val id: String,
+    val id: String? = null,
 
     val url: String? = null,
 

@@ -3,8 +3,8 @@ package net.alphadev.jsonfeed.import
 import net.alphadev.jsonfeed.format.*
 
 internal fun JsonFeedInternal.toJsonFeed() = JsonFeed(
-    version = JsonFeed11,
-    title = title,
+    version = JsonFeed11.also { if(version == null) throw FeedParsingException("JsonFeed needs a version") },
+    title = title ?: throw FeedParsingException("JsonFeed needs a title"),
     homePageUrl = homePageUrl,
     feedUrl = feedUrl,
     description = description,
@@ -26,5 +26,11 @@ internal fun JsonFeedInternal.toJsonFeed() = JsonFeed(
         }
     },
     expired = expired,
-    items = items.map(JsonItemInternal::toJsonItem)
+    items = items.mapNotNull {
+        try {
+            it.toJsonItem()
+        } catch (ex: FeedParsingException) {
+            null
+        }
+    }
 )
