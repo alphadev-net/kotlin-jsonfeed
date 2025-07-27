@@ -3,6 +3,9 @@ package net.alphadev.jsonfeed.format
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
+const val JsonFeed1 = "https://jsonfeed.org/version/1"
+const val JsonFeed11 = "https://jsonfeed.org/version/1.1"
+
 @Serializable
 data class JsonFeed(
     val version: String,
