@@ -43,8 +43,7 @@ class JsonFeedParsingTest {
         }
         """.trimIndent()
 
-        val feed = parseJsonFeed(input)
-        assertIs<JsonFeed>(feed)
+        assertIs<JsonFeed>(parseJsonFeed(input))
     }
 
     @Test
@@ -105,7 +104,6 @@ class JsonFeedParsingTest {
         }
         """.trimIndent()
 
-        val feed = parseJsonFeed(input)
-        assertIs<JsonFeed>(feed)
+        assertIs<JsonFeed>(parseJsonFeed(input))
     }
 }
