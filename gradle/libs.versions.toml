@@ -3,7 +3,7 @@ ajalt-clikt = "5.0.3"
 kotlinx-datetime = "0.7.0"
 kotlinx-io = "0.7.0"
 okhttp="4.12.0"
-pdvrieze-xmlutil = "0.91.1"
+pdvrieze-xmlutil = "0.91.2"
 
 [libraries]
 ajalt-clikt = { group = "com.github.ajalt.clikt", name = "clikt", version.ref = "ajalt-clikt" }
