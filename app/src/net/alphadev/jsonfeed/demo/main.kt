@@ -2,25 +2,20 @@ package net.alphadev.jsonfeed.demo
 
 import net.alphadev.jsonfeed.format.JsonFeed
 import net.alphadev.jsonfeed.import.parseJsonFeed
-import okhttp3.OkHttpClient
-import okhttp3.Request
+import io.ktor.client.HttpClient
+import io.ktor.client.request.get
+import io.ktor.client.statement.bodyAsText
 
-fun main() {
+suspend fun main() {
     val feedData = loadFeedContents()
     val feed = parseJsonFeed(feedData ?: return)
     printFeedOverview(feed ?: return)
 }
 
-private fun loadFeedContents(): String? {
-    val client = OkHttpClient()
-
-    val request = Request.Builder()
-        .url("https://jan.alphadev.net/feed.json")
-        .build()
-
-    val response = client.newCall(request).execute()
-
-    return response.body?.string()
+private suspend fun loadFeedContents(): String {
+    val client = HttpClient()
+    return client.get("https://jan.alphadev.net/feed.json")
+        .bodyAsText()
 }
 
 private fun printFeedOverview(feed: JsonFeed) {

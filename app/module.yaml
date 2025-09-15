@@ -3,7 +3,7 @@ product: jvm/app
 dependencies:
   - ../lib
   - $libs.ajalt.clikt
-  - $libs.okhttp
+  - $libs.ktor.client
 
 settings:
   publishing:
