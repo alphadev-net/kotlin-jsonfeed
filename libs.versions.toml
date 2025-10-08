@@ -2,7 +2,7 @@
 ajalt-clikt = "5.0.3"
 kotlinx-datetime = "0.7.1"
 kotlinx-io = "0.8.0"
-ktor = "3.3.0"
+ktor = "3.3.1"
 pdvrieze-xmlutil = "0.91.2"
 
 [libraries]
