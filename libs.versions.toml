@@ -1,5 +1,6 @@
 [versions]
 ajalt-clikt = "5.0.3"
+dachlatten = "0.0.100"
 kotlinx-datetime = "0.7.1"
 kotlinx-io = "0.8.0"
 ktor = "3.3.0"
@@ -7,6 +8,7 @@ pdvrieze-xmlutil = "0.91.2"
 
 [libraries]
 ajalt-clikt = { module = "com.github.ajalt.clikt:clikt", version.ref = "ajalt-clikt" }
+dachlatten-io = { module = "de.sipgate:dachlatten-io", version.ref = "dachlatten" }
 kotlinx-datetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "kotlinx-datetime" }
 kotlinx-io-core = { module = "org.jetbrains.kotlinx:kotlinx-io-core", version.ref = "kotlinx-io" }
 ktor-client = { module = "io.ktor:ktor-client-cio", version.ref = "ktor" }

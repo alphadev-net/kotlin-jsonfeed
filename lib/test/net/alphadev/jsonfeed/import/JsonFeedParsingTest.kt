@@ -1,9 +1,9 @@
 package net.alphadev.jsonfeed.import
 
+import de.sipgate.dachlatten.io.readResource
 import kotlinx.io.readString
 import net.alphadev.jsonfeed.format.JsonFeed
 import net.alphadev.jsonfeed.format.useText
-import net.alphadev.jsonfeed.readResource
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertFailsWith
