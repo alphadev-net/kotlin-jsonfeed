@@ -1,14 +1,15 @@
 repositories:
-  - id: github
-    url: https://maven.pkg.github.com/janseeger/kotlin-jsonfeed
-    resolve: false
+  - id: alphaDev
+    url: https://maven.alphadev.net/releases
+    resolve: true
     publish: true
     credentials:
       file: local.properties
-      usernameKey: github.username
-      passwordKey: github.password
+      usernameKey: alphadev.username
+      passwordKey: alphadev.password
 
 settings:
   publishing:
+    enabled: true
     group: net.alphadev
     version: 0.0.0

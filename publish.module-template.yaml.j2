@@ -1,14 +1,15 @@
 repositories:
-  - id: github
-    url: {{ env['PUBLISH_REPO'] }}
-    resolve: false
+  - id: alphaDev
+    url: https://maven.alphadev.net/releases
+    resolve: true
     publish: true
     credentials:
       file: local.properties
-      usernameKey: github.username
-      passwordKey: github.password
+      usernameKey: alphadev.username
+      passwordKey: alphadev.password
 
 settings:
   publishing:
+    enabled: true
     group: {{ env['PUBLISH_GROUP'] }}
     version: {{ env['PUBLISH_VERSION'] }}
