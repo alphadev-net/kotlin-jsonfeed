@@ -5,6 +5,8 @@
   ],
   "packageRules": [
     {
+      "automerge": true,
+      "platformAutomerge": true,
       "matchDatasources": ["maven"],
       "registryUrls": [
         "https://maven.alphadev.net/releases",
