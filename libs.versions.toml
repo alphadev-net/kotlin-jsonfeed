@@ -1,5 +1,5 @@
 [versions]
-ajalt-clikt = "5.0.3"
+ajalt-clikt = "5.1.0"
 dachlatten = "0.0.101"
 kotlinx-datetime = "0.7.1"
 kotlinx-io = "0.8.2"
