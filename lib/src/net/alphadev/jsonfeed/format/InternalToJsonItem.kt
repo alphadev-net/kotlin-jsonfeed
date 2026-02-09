@@ -6,7 +6,7 @@ import kotlin.time.ExperimentalTime
 import kotlin.time.Instant
 
 @ExperimentalTime
-fun JsonItemInternal.toJsonItem() = JsonItem(
+internal fun JsonItemInternal.toJsonItem() = JsonItem(
     id = id ?: throw FeedParsingException("JsonItem needs the id Field to be set"),
     url = url,
     externalUrl =externalUrl,

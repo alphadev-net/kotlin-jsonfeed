@@ -4,7 +4,7 @@ import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class JsonAttachment(
+public data class JsonAttachment(
     val url: String,
 
     @SerialName("mime_type")

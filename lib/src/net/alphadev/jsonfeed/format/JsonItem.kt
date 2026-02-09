@@ -4,7 +4,7 @@ import kotlin.time.ExperimentalTime
 import kotlin.time.Instant
 
 @ExperimentalTime
-data class JsonItem(
+public data class JsonItem(
     val id: String,
     val url: String? = null,
     val externalUrl: String? = null,

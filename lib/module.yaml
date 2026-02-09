@@ -16,6 +16,8 @@ settings:
     serialization:
       format: json
       version: 1.9.0
+    freeCompilerArgs:
+      - -Xexplicit-api=warning
   publishing:
     name: kotlin-jsonfeed
 

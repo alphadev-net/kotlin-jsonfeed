@@ -6,7 +6,7 @@ import net.alphadev.jsonfeed.format.JsonFeedInternal
 import kotlin.time.ExperimentalTime
 
 @ExperimentalTime
-fun formatJsonFeed(jsonFeed: JsonFeed): String = try {
+public fun formatJsonFeed(jsonFeed: JsonFeed): String = try {
     Json.encodeToString(JsonFeedInternal.serializer(), jsonFeed.toJsonFeedInternal()) + "\n"
 } catch (ex: Throwable) {
     throw FeedExportException(cause = ex)
