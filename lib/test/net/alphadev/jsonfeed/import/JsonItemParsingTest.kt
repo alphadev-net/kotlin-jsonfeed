@@ -3,8 +3,10 @@ package net.alphadev.jsonfeed.import
 import kotlinx.serialization.json.Json
 import net.alphadev.jsonfeed.format.*
 import kotlin.test.*
+import kotlin.time.ExperimentalTime
 import kotlin.time.Instant
 
+@OptIn(ExperimentalTime::class)
 class JsonItemParsingTest {
     @Test
     fun testDecodingWithMinimallyRequiredAttributesWorks() {

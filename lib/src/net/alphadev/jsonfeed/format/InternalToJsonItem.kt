@@ -1,9 +1,11 @@
 package net.alphadev.jsonfeed.format
 
-import kotlinx.datetime.parse
 import net.alphadev.jsonfeed.import.FeedParsingException
+import kotlinx.datetime.parse
+import kotlin.time.ExperimentalTime
 import kotlin.time.Instant
 
+@ExperimentalTime
 fun JsonItemInternal.toJsonItem() = JsonItem(
     id = id ?: throw FeedParsingException("JsonItem needs the id Field to be set"),
     url = url,
@@ -26,6 +28,7 @@ fun JsonItemInternal.toJsonItem() = JsonItem(
     attachments = attachments
 )
 
+@ExperimentalTime
 private fun parseDate(input: String?) = try {
     input?.let { Instant.parse(it, dateFormatter) }
 } catch (_: Throwable) {

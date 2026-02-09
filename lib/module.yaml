@@ -16,8 +16,6 @@ settings:
     serialization:
       format: json
       version: 1.9.0
-    optIns:
-      - kotlin.time.ExperimentalTime
   publishing:
     name: kotlin-jsonfeed
 

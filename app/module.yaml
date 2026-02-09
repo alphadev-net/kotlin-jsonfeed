@@ -9,6 +9,9 @@ settings:
   publishing:
     enabled: false
     name: jsonfeed-demo
+  kotlin:
+    optIns:
+      - kotlin.time.ExperimentalTime
 
 apply:
   - ../publish.module-template.yaml

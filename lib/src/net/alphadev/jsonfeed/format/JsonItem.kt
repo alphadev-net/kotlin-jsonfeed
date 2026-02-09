@@ -1,7 +1,9 @@
 package net.alphadev.jsonfeed.format
 
+import kotlin.time.ExperimentalTime
 import kotlin.time.Instant
 
+@ExperimentalTime
 data class JsonItem(
     val id: String,
     val url: String? = null,

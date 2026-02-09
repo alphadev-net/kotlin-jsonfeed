@@ -4,7 +4,9 @@ import net.alphadev.jsonfeed.format.JsonFeed
 import net.alphadev.jsonfeed.format.JsonFeedInternal
 import net.alphadev.jsonfeed.format.JsonItem
 import net.alphadev.jsonfeed.format.toJsonItemInternal
+import kotlin.time.ExperimentalTime
 
+@ExperimentalTime
 internal fun JsonFeed.toJsonFeedInternal() = JsonFeedInternal(
     version = version,
     title = title,

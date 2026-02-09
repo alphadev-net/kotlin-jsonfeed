@@ -1,7 +1,9 @@
 package net.alphadev.jsonfeed.import
 
 import net.alphadev.jsonfeed.format.*
+import kotlin.time.ExperimentalTime
 
+@ExperimentalTime
 internal fun JsonFeedInternal.toJsonFeed() = JsonFeed(
     version = JsonFeed11.also { if(version == null) throw FeedParsingException("JsonFeed needs a version") },
     title = title ?: throw FeedParsingException("JsonFeed needs a title"),

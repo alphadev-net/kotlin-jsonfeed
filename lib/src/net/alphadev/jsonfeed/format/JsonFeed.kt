@@ -1,8 +1,11 @@
 package net.alphadev.jsonfeed.format
 
+import kotlin.time.ExperimentalTime
+
 const val JsonFeed1 = "https://jsonfeed.org/version/1"
 const val JsonFeed11 = "https://jsonfeed.org/version/1.1"
 
+@ExperimentalTime
 data class JsonFeed(
     val version: String,
 

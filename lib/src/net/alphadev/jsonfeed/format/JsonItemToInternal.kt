@@ -1,7 +1,9 @@
 package net.alphadev.jsonfeed.format
 
 import kotlinx.datetime.format
+import kotlin.time.ExperimentalTime
 
+@ExperimentalTime
 internal fun JsonItem.toJsonItemInternal() = JsonItemInternal(
     id = id,
     url = url,
