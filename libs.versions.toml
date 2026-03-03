@@ -3,7 +3,6 @@ ajalt-clikt = "5.1.0"
 dachlatten = "0.0.109"
 kotlinx-datetime = "0.7.1"
 kotlinx-io = "0.9.0"
-ktor = "3.4.0"
 pdvrieze-xmlutil = "0.91.3"
 
 [libraries]
@@ -11,6 +10,5 @@ ajalt-clikt = { module = "com.github.ajalt.clikt:clikt", version.ref = "ajalt-cl
 dachlatten-io = { module = "de.sipgate:dachlatten-io", version.ref = "dachlatten" }
 kotlinx-datetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "kotlinx-datetime" }
 kotlinx-io-core = { module = "org.jetbrains.kotlinx:kotlinx-io-core", version.ref = "kotlinx-io" }
-ktor-client = { module = "io.ktor:ktor-client-cio", version.ref = "ktor" }
 pdvrieze-xmlutil-core = { module = "io.github.pdvrieze.xmlutil:core", version.ref = "pdvrieze-xmlutil"}
 pdvrieze-xmlutil-serialization = { module = "io.github.pdvrieze.xmlutil:serialization", version.ref = "pdvrieze-xmlutil"}

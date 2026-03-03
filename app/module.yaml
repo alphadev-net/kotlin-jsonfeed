@@ -3,7 +3,7 @@ product: jvm/app
 dependencies:
   - ../lib
   - $libs.ajalt.clikt
-  - $libs.ktor.client
+  - $ktor.client.cio
 
 settings:
   publishing:
@@ -12,6 +12,7 @@ settings:
   kotlin:
     optIns:
       - kotlin.time.ExperimentalTime
+  ktor: enabled
 
 apply:
   - ../publish.module-template.yaml
