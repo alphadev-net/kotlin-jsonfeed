@@ -12,6 +12,11 @@
         "https://maven.alphadev.net/releases",
         "https://repo1.maven.org/maven2/"
       ]
+    },
+    {
+      "matchPackageNames": ["org.jetbrains.kotlinx:kotlinx-datetime"],
+      "matchNewValue": "/-compat$/",
+      "enabled": false
     }
   ]
 }
