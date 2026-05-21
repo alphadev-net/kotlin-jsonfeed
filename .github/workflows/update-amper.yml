@@ -1,4 +1,4 @@
-name: Amper Auto-Update
+name: Kotlin Toolchain Auto-Update
 
 on:
   schedule:
@@ -12,8 +12,8 @@ on:
         type: boolean
 
 jobs:
-  update-amper:
-    uses: alphadev-net/action-workflows/.github/workflows/update-amper.yml@main
+  update-kotlin-toolchain:
+    uses: alphadev-net/action-workflows/.github/workflows/update-kotlin-toolchain.yml@main
     with:
       force_update: ${{ inputs.force_update || false }}
     permissions:
